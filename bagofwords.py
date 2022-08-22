@@ -21,7 +21,7 @@ def process():
                 toabs.append(l)
 
     setabs = set(toabs)                         #bag of all abstract
-    babs = list(setabs)
+    babs = list(setabs)                         #list of all the words in the abstract
 
     tok = {}
     for val in babs:
@@ -40,7 +40,7 @@ def process():
                 if val3 == val1:
                     word.append(val1)
                     count = count + 1
-                    babs = list(map(lambda x: x.replace(val1, '@'), babs))
+                    babs = list(map(lambda x: x.replace(val1, '@'), babs))  #replacing the already found word with @
 
         if count > 2:
             words = val
